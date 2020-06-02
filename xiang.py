@@ -36,12 +36,11 @@ def obtain_hist_data(tws, callback):
 	                      0, 
 	                      1)
 	time.sleep(2)
-	data = pd.DataFrame(callback.historical_Data, 
-	                    columns = ["reqId", "date", "open",
-	                               "high", "low", "close", 
-	                               "volume", "count", "WAP", 
-	                               "hasGaps"])
-	return data
+	return pd.DataFrame(callback.historical_Data, 
+		                    columns = ["reqId", "date", "open",
+		                               "high", "low", "close", 
+		                               "volume", "count", "WAP", 
+		                               "hasGaps"])
 
 
 def SMA(data, short_length, long_length):
